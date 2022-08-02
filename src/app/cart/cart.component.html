@@ -1,0 +1,38 @@
+
+<div class="container">
+    <div class="card-table">
+        <div class="class-product">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Product Image</th>
+            <th>Price</th>
+            <th>Subcategory</th>
+            
+        </tr>
+        
+       
+    </thead>
+    <table>
+    <tr *ngFor="let cart of product,let i=index">
+      
+        <td style="width: 15%;">{{cart.name}}</td>
+        <td><img style="width: 100px;" src="{{cart.image}}" alt=""></td>
+        <td >{{cart.price}}</td>
+        <td>{{cart.subcategory}}</td>
+        <td> <button (click)="remove(product)">remove</button></td>
+    
+    
+    </tr>
+    
+   
+    <tr>
+        <td>{{total}}</td>
+    </tr>
+    
+    </table>
+</div>
+</div>
+</div>
+ <button (click)="nav()">Checkout</button>
+

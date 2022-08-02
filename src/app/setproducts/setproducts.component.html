@@ -1,0 +1,78 @@
+<mat-tab-group mat-align-tabs="start" style="background-color: black;">
+    <mat-tab label="Add product"><form [formGroup]="form" (ngSubmit)="onSubmit()" >
+        <mat-form-field class="example-form">
+            <input matInput formControlName="image" type="text" placeholder="Image URL">
+         </mat-form-field>
+         <br>
+         <mat-form-field class="example-form">
+            <input matInput formControlName="name" type="text" placeholder="Product Name" id="name" name="name"
+             minlength="3" maxlength="50">
+         </mat-form-field>
+         <br>
+           <mat-form-field appearance="fill">
+              <mat-label>Categories</mat-label>
+              <mat-select name="products" formControlName="category">
+                <mat-option *ngFor="let p of category" [value]="p">
+                  {{p}}
+                </mat-option>
+              </mat-select>
+             
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill">
+              <mat-label>Subcategory</mat-label>
+              <mat-select name="products" formControlName="subcategory">
+                <mat-option *ngFor="let q of subcategory" [value]="q">
+                  {{q}}
+                </mat-option>
+              </mat-select>
+             
+            </mat-form-field>
+            <br>
+
+            <mat-form-field class="example-form">
+                <input matInput type="number" formControlName="price" placeholder="Price" id="number" name="number"
+                 minlength="3" maxlength="50">
+             </mat-form-field>
+            <br>
+            <button type="submit" style="margin-right:20px" mat-raised-button color="primary" (click)="addItem()">Add</button>
+            <button type="submit" mat-raised-button color="primary" (click)="reset()">Reset</button>
+
+            </form> 
+<br>
+</mat-tab>
+    <mat-tab label="Users"><p>
+        <mat-toolbar *ngFor="let products of userArray">
+          <span>Avaliable users:{{products.Email}}</span>
+          </mat-toolbar>
+        </p></mat-tab>
+    <mat-tab label="Table">
+      
+     <div class="col">      
+        <div class="table">
+          <thead>
+          <tr>
+          <th>Product Name</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th>Subcategory</th>
+           </tr>
+           </thead>
+           <tbody>
+             <tr *ngFor="let item of items">
+               <td>{{item.name}}</td>
+               <td>{{item.price}}</td>
+               <td>{{item.category}}</td>
+               <td>{{item.subcategory}}</td>
+               <td><a  routerLink='/edit' [queryParams]="{'id':item.id}">edit</a></td>
+               <td> <button mat-raised-button color="primary"(click)="remove(item.id!)">Remove</button></td>
+              </tr>
+           </tbody>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+
+ 
+
+        

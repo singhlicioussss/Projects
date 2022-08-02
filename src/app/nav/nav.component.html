@@ -1,0 +1,26 @@
+<p style="margin-bottom:0">
+    <mat-toolbar>
+     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon routerLink="/setproducts" *ngIf="admin" >admin_panel_settings</mat-icon>
+    </button>
+    <span>Shopello</span>
+    <label style="font-size: 20px;margin-left:10px;"></label>
+    <input type="text" style="margin-left: 15px ;"matInput placeholder="Search" class="search" #search >
+    <button mat-button color="primary" class="icon" (click)="searchvalue(search)"><mat-icon>search</mat-icon>
+    </button>
+    <span class="example-spacer"></span>
+    <!-- <span class="search-spacer"></span> -->
+    <span class="user">{{user$?.email}}</span>
+    <button mat-button color="primary"*ngIf="!user$" routerLink="login">Login</button>
+    <button mat-button color="primary" *ngIf="user$" (click)="logout()">Logout</button>
+    
+    <!-- <button m?at-icon-button class="example-icon" aria-label="Example icon-button with share icon"> -->
+      <a style="margin-left: 20px;margin-top:15px;"routerLink="/whishlist"><mat-icon>turned_in</mat-icon>
+      </a>
+    <a style="margin-left: 20px;margin-top:15px;"routerLink="/cart"><mat-icon>shopping_basket</mat-icon>
+    </a>
+ 
+  </mat-toolbar>
+  
+
+  

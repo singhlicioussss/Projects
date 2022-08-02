@@ -1,0 +1,160 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+*{
+padding:0;
+margin:0;
+box-sizing: border-box;
+}
+.space {
+  width: 10px;
+  height: auto;
+  display: inline-block;
+
+}
+.left{
+  margin-left:10px;
+}
+.heading{
+  margin-left:18px;
+
+}
+
+.dropdown{
+  display: none;
+  position:absolute;
+  background-color: #f9f9f9;
+  min-width:158px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index:1;
+}
+.space{
+  padding-left:20px ;
+}
+.button{
+  width:200px;
+}
+.dropdown a{
+  color:black;
+  padding:12px 6px;
+  text-decoration: none;
+  display:block;
+}
+.dropdown a:hover{
+  background-color:antiquewhite
+
+}
+.right-menu:hover .dropdown{
+  display: block;
+}
+  
+  .mat-edit{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;  
+    height:100%;
+  }
+ 
+ section{
+   display:flex;
+   justify-content: center;
+   align-items:center;
+   height: 100vh;
+   background-color:black;
+ }
+ .cover img{
+   height:600px;
+   width:1300px;
+   background-size:cover;
+ }
+ .text{
+   position:absolute;
+   top:30%;
+   left:7%;
+
+ }
+ h1{
+   font-size:60px;
+   font-family:barlowcondensed,sans-serif;
+   text-transform:capitalize;
+   width:460px;
+   word-spacing:0px;
+   font-weight:normal;
+   line-height:72px;
+ }
+ h4{
+   position:absolute;
+   top:-9%;
+   font: size 2px;
+   font-family:barlow condensed,sans-serif;
+   font-weight:normal;
+   text-transform:uppercase;
+ }
+form input[type="submit"]{
+  position:absolute;
+  top:86%;
+  padding:10px;
+  text-transform:uppercase;
+  background-color:crimson;
+  border:none;
+  color:white;
+  font-family:barlow condensed,sans-serif;
+  letter-spacing: 1px;
+  margin-top:2px;
+}
+form input[type="submit"]:hover{
+  background-color:red;
+}
+.image1{
+  position:abolsute;
+  margin-left:10%;
+  top:200%;
+}
+h6{
+  color:black;
+  position:absolute;
+  margin-left:2%;
+  top:180%;
+  border:6px solid whitesmoke;
+  width:150px;
+  font-size:40px;
+  font-family:barlow condensed,sans-serif;
+  background-color:white;
+}
+.image2{
+position:abolsute;
+margin-left:10%;
+top:200%;
+}
+h3{
+  color:black;
+  position:absolute;
+  margin-left:2%;
+  top:180%;
+  border:6px solid whitesmoke;
+  width:150px;
+  font-size:40px;
+  font-family:barlow condensed,sans-serif;
+  background-color:white;
+}
+.img{
+  display:flex;
+  margin-top:15%;
+}
+.image3{
+  position:abolsute;
+  margin-left:10%;
+top:200%;
+}
+h3{
+  color:black;
+  position:absolute;
+  margin-left:2%;
+  top:180%;
+  border:6px solid whitesmoke;
+  width:150px;
+  font-size:40px;
+  font-family:barlow condensed,sans-serif;
+  background-color:white;
+}

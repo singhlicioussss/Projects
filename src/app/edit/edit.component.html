@@ -1,0 +1,40 @@
+
+<mat-tab-group mat-align-tabs="start" style="background-color: black;">
+    <mat-tab label="Add product"><form [formGroup]="form" (ngSubmit)="onSubmit()" >
+        <mat-form-field class="example-form">
+            <input matInput formControlName="image" type="text" placeholder="Image URL">
+         </mat-form-field>
+         <br>
+         <mat-form-field class="example-form">
+            <input matInput formControlName="name" type="text" placeholder="Product Name" id="name" name="name"
+             minlength="3" maxlength="50">
+         </mat-form-field>
+         <br>
+           <mat-form-field appearance="fill">
+              <mat-label>Categories</mat-label>
+              <mat-select name="products" formControlName="category">
+                <mat-option *ngFor="let p of category" [value]="p">
+                  {{p}}
+                </mat-option>
+              </mat-select>
+             
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill">
+              <mat-label>Subcategory</mat-label>
+              <mat-select name="products" formControlName="subcategory">
+                <mat-option *ngFor="let q of subcategory" [value]="q">
+                  {{q}}
+                </mat-option>
+              </mat-select>
+             
+            </mat-form-field>
+            <br>
+
+            <mat-form-field class="example-form">
+                <input matInput type="number" formControlName="price" placeholder="Price" id="number" name="number"
+                 minlength="3" maxlength="50">
+             </mat-form-field>
+            <br>
+            <button type="submit" style="margin-right:20px" mat-raised-button color="primary" (click)="updateItem()">Update</button>
+            </form> 
